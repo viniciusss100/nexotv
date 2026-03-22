@@ -367,7 +367,7 @@ export class M3UEPGAddon {
         if (item.referrer)  reqHeaders['Referer']    = item.referrer;
         const behaviorHints = Object.keys(reqHeaders).length
             ? { notWebReady: true, proxyHeaders: { request: reqHeaders } }
-            : { notWebReady: true };
+            : {};
 
         if (item.urls && item.urls.length > 0) {
             return item.urls.map((url: string, index: number) => ({
